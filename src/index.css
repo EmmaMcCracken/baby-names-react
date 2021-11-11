@@ -19,7 +19,7 @@ code {
   text-decoration: none;
   display: inline-block;
   font-size: 32px;
-  margin: 4px 2px;
+  margin: 4px 4px;
   cursor: pointer;
 }
 
@@ -32,8 +32,8 @@ code {
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
-  margin: 4px 2px;
   cursor: pointer;
+  margin: 4px;
   border-radius: 5%;
 }
 .buttonF {
@@ -45,7 +45,7 @@ code {
   text-decoration: none;
   display: inline-block;
   font-size: 24px;
-  margin: 4px 2px;
+  margin: 4px;
   cursor: pointer;
   border-radius: 5%;
 }
