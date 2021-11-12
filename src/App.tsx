@@ -10,25 +10,15 @@ function App() {
   const [favouriteIDs, setFavouriteIDs] = useState<number[]>([]);
 
   function handleAddToFavourites(babyName: babyName) {
-    console.log("handleAddToFavourites has been called");
     if (favouriteIDs.includes(babyName.id)) {
       return;
     }
     setFavouriteIDs([...favouriteIDs, babyName.id]);
   }
   function handleRemoveFromFavourites(babyName: babyName) {
-    console.log(
-      "handleRemove... has been called and favouriteIDs are",
-      favouriteIDs
-    );
-    let newFavouriteIDs = favouriteIDs;
+    const newFavouriteIDs = favouriteIDs;
     newFavouriteIDs.splice(newFavouriteIDs.indexOf(babyName.id), 1);
     setFavouriteIDs(newFavouriteIDs);
-    console.log("after the splice, newFavouriteIDs are", newFavouriteIDs);
-    console.log(
-      "favouriteIDs should hopefully be the same as above, favouriteIDs are",
-      favouriteIDs
-    );
   }
   return (
     <div className="App">
