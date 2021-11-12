@@ -14,7 +14,7 @@ export function FavouritesList(props: FavouritesListProps) {
   return (
     <div className="babyNamesList">
       {favouriteNames.map((baby: babyName) => (
-        <BabyName key={baby.id} babyName={baby} onClick={() => {}} />
+        <BabyName key={baby.id} babyName={baby} onClick={props.onClick} />
       ))}
     </div>
   );

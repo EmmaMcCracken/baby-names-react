@@ -16,12 +16,26 @@ function App() {
     }
     setFavouriteIDs([...favouriteIDs, babyName.id]);
   }
+  function handleRemoveFromFavourites(babyName: babyName) {
+    console.log(
+      "handleRemove... has been called and favouriteIDs are",
+      favouriteIDs
+    );
+    let newFavouriteIDs = favouriteIDs;
+    newFavouriteIDs.splice(newFavouriteIDs.indexOf(babyName.id), 1);
+    setFavouriteIDs(newFavouriteIDs);
+    console.log("after the splice, newFavouriteIDs are", newFavouriteIDs);
+    console.log(
+      "favouriteIDs should hopefully be the same as above, favouriteIDs are",
+      favouriteIDs
+    );
+  }
   return (
     <div className="App">
       <FavouritesList
         allBabyNames={allBabyNames}
         favouriteIDs={favouriteIDs}
-        onClick={() => {}}
+        onClick={handleRemoveFromFavourites}
       />
       <BabyNamesList names={allBabyNames} onClick={handleAddToFavourites} />
     </div>
